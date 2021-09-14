@@ -4,6 +4,10 @@ Data Science projects will appear here, as I attempt them.
 I have recently begun learning SQL, so projects using that will likely begin to appear here, eventually leading to a full data into SQL into python project. 
 
 
+## SQL Projects
+
+Currently doing a project looking into the stratetgy of certain boardgames, using SQL for data manipulation.
+
 ## Kaggle
 
 Titanic:
