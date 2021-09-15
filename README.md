@@ -6,7 +6,7 @@ I have recently begun learning SQL, so projects using that will likely begin to 
 
 ## SQL Projects
 
-Currently doing a project looking into the stratetgy of certain boardgames, using SQL for data manipulation.
+Currently undertaking a project looking into the stratetgy behind certain boardgames, using SQL for data manipulation.
 
 ## Kaggle
 
