@@ -50,6 +50,30 @@ SELECT
 				) THEN 1
 			ELSE 0
 		END
-	) AS wins
+	) AS wins,
+	100.0*(wins / games_played)
 FROM gwt_game_results
+GROUP BY 1;
+
+-- including a winrate and kicking the case to a subquery
+WITH win_bool AS (
+	SELECT 
+		player_id,
+		CASE
+			WHEN id IN (
+				SELECT id
+				FROM gwt_game_results
+				GROUP BY game_id
+				HAVING MAX(total_scr)
+				) THEN 1
+			ELSE 0
+		END AS win
+	FROM gwt_game_results
+	)
+SELECT 
+	player_id, 
+	COUNT(1) AS games_played,
+	SUM(win) AS wins,
+	ROUND(100.0 * SUM(win) / COUNT(1),1) AS winrate
+FROM win_bool
 GROUP BY 1;
