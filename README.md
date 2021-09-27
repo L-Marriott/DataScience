@@ -15,6 +15,6 @@ Titanic:
 - Basic classifier using random forests boosted through gridsearch
 
 House Prices:
-- 3605/4652
+- 2902/4652
 - Random forest with gridsearch and PCA
 - Neural network with PCA
